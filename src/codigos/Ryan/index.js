@@ -1,7 +1,7 @@
-import codigo01 from './codigo01.js'
-import codigo02 from './codigo02.js'
-import codigo03 from './codigo03.js'
-import codigo04 from './codigo04.js'
+import codigo01 from 'src/Ryan/codigo01.js'
+import codigo02 from 'src/Ryan/codigo02.js'
+import codigo03 from 'src/Ryan/codigo03.js'
+import codigo04 from 'src/Ryan/codigo04.js'
 
 const codigosRyan = [
   {
