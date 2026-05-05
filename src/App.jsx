@@ -44,7 +44,7 @@ const equipe = [
     nome: "Walleysson Ferreira",
     foto: "https://ui-avatars.com/api/?name=Walleysson+Ferreira&background=e74c3c&color=fff",
     corTema: "#e74c3c",
-    descricao: "Desenvolveu o componente Conteúdo e lista de equipe",
+    descricao: "Desenvolveu o componente Card e Cabeçalho",
     codigos: { facil: ``, dificil: ``, ajudou: ``, naoAjudou: `` }
   }
 ];

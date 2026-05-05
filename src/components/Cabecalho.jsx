@@ -5,7 +5,7 @@ export default function Cabecalho({ setPagina, paginaAtual }) {
     <header className="cabecalho">
       <div className="cabecalho-logo">
         <span className="cabecalho-logo-icon">{'</>'}</span>
-        <span className="cabecalho-logo-texto">Vitrine  Time 6</span>
+        <span className="cabecalho-logo-texto">Vitrine  Time 6wwww</span>
       </div>
 
       <nav className="cabecalho-nav">
