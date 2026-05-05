@@ -1,13 +1,29 @@
-import codigo01 from './codigo01.js'
+import codigo01 from 'codigo/codigo01.js'
 import codigo02 from './codigo02.js'
 import codigo03 from './codigo03.js'
 import codigo04 from './codigo04.js'
 
 const codigosArthurEmanuel = [
-  codigo01,
-  codigo02,
-  codigo03,
-  codigo04,
+  {
+    titulo:    'Código 1',
+    categoria: 'JavaScript',
+    codigo:    codigo01,
+  },
+  {
+    titulo:    'Código 2',
+    categoria: 'JavaScript',
+    codigo:    codigo02,
+  },
+  {
+    titulo:    'Código 3',
+    categoria: 'JavaScript',
+    codigo:    codigo03,
+  },
+  {
+    titulo:    'Código 4',
+    categoria: 'JavaScript',
+    codigo:    codigo04,
+  },
 ]
 
 export default codigosArthurEmanuel
