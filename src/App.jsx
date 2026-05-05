@@ -12,7 +12,7 @@ const equipe = [
     nome: "Davi Barbosa",
     foto: "https://ui-avatars.com/api/?name=Davi+Barbosa&background=3498db&color=fff",
     corTema: "#3498db",
-    descricao: "Implementou o componente Menu e Card",
+    descricao: "Alterou a estilização do rodapé, organizou as informações do rodapé e alterou o componente Conteudo para que ficasse mais bem projetado",
     codigos: { facil: ``, dificil: ``, ajudou: ``, naoAjudou: `` }
   },
   {

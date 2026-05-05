@@ -4,9 +4,12 @@ export default function Conteudo({ equipe }) {
   return (
     <div className="conteudoContainer">
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <h1 style={{ color: '#333' }}>
-          Sobre a Equipe
-        </h1>
+          <h1 style={{ color: '#333' }}>
+            Sobre a Equipe
+          </h1>
+          <p style={{ color: '#666', fontSize: '1rem' }}>
+            Conheça as pessoas que ajudaram a construir este projeto.
+          </p>
       </div>
 
       {equipe.map((membro, index) => (
@@ -25,7 +28,6 @@ export default function Conteudo({ equipe }) {
             </p>
           </div>
         </div>
-      ))}
-    </div>
+      ))}    </div>
   );
 }
