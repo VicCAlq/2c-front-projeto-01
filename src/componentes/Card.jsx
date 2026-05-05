@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import styles from '../styles/main.js'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Code2, Tag, Copy, Check, ChevronDown, ChevronUp } from 'lucide-react'
 
@@ -23,41 +22,40 @@ export default function Card({ titulo, categoria, codigo, index = 0 }) {
       await navigator.clipboard.writeText(codigo || '')
       setCopiado(true)
       setTimeout(() => setCopiado(false), 2000)
-    } catch {}
+    } catch (error) {
+        console.log('Erro ao copiar:', error)
+      }
   }
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 40, scale: 0.92 }}
+      initial={{ opacity: 0, y: 35, scale: 0.95 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{
         type: 'spring',
         stiffness: 120,
         damping: 18,
-        delay: index * 0.06,
+        delay: index * 0.05,
       }}
-      whileHover={{
-        y: -8,
-        scale: 1.01,
-      }}
+      whileHover={{ y: -6 }}
       style={{
         borderRadius: '18px',
         padding: '18px',
-        backdropFilter: 'blur(14px)',
-        background: 'rgba(20, 20, 30, 0.65)',
+        background: 'rgba(20,20,30,0.72)',
+        backdropFilter: 'blur(16px)',
         border: '1px solid rgba(255,255,255,0.06)',
-        boxShadow: '0 10px 30px rgba(0,0,0,0.25)',
+        boxShadow: '0 12px 35px rgba(0,0,0,0.28)',
         position: 'relative',
         overflow: 'hidden',
       }}
     >
-      {/* Glow suave */}
+      {/* glow mais suave */}
       <div
         style={{
           position: 'absolute',
           inset: 0,
           background:
-            'linear-gradient(135deg, rgba(139,92,246,0.08), transparent 60%, rgba(6,182,212,0.08))',
+            'radial-gradient(circle at top left, rgba(139,92,246,0.12), transparent 60%)',
           pointerEvents: 'none',
         }}
       />
@@ -79,6 +77,7 @@ export default function Card({ titulo, categoria, codigo, index = 0 }) {
               gap: '6px',
               fontSize: '15px',
               color: '#e5e7eb',
+              fontWeight: '500',
             }}
           >
             <Code2 size={15} style={{ opacity: 0.7 }} />
@@ -87,32 +86,30 @@ export default function Card({ titulo, categoria, codigo, index = 0 }) {
 
           <motion.button
             onClick={copiar}
-            whileHover={{ scale: 1.08 }}
+            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             style={{
               fontSize: '12px',
               padding: '6px 10px',
               borderRadius: '999px',
-              border: 'none',
+              border: '1px solid rgba(255,255,255,0.08)',
               cursor: 'pointer',
               background: copiado
-                ? 'rgba(52,211,153,0.15)'
+                ? 'rgba(52,211,153,0.12)'
                 : 'rgba(255,255,255,0.05)',
-              color: copiado ? '#34d399' : '#ccc',
+              color: copiado ? '#34d399' : '#cfcfcf',
               display: 'flex',
               alignItems: 'center',
               gap: '5px',
-              transition: '0.3s',
             }}
           >
             <AnimatePresence mode="wait">
               {copiado ? (
                 <motion.span
                   key="ok"
-                  initial={{ opacity: 0, scale: 0.7 }}
+                  initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0 }}
-                  style={{ display: 'flex', alignItems: 'center', gap: '4px' }}
                 >
                   <Check size={13} /> Copiado
                 </motion.span>
@@ -122,7 +119,6 @@ export default function Card({ titulo, categoria, codigo, index = 0 }) {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  style={{ display: 'flex', alignItems: 'center', gap: '4px' }}
                 >
                   <Copy size={13} /> Copiar
                 </motion.span>
@@ -138,7 +134,7 @@ export default function Card({ titulo, categoria, codigo, index = 0 }) {
               fontSize: '11px',
               padding: '4px 8px',
               borderRadius: '999px',
-              background: 'rgba(139,92,246,0.15)',
+              background: 'rgba(139,92,246,0.12)',
               color: '#c4b5fd',
               display: 'inline-flex',
               alignItems: 'center',
@@ -157,7 +153,7 @@ export default function Card({ titulo, categoria, codigo, index = 0 }) {
             fontSize: '13px',
             padding: '14px',
             borderRadius: '12px',
-            background: '#0d0d15',
+            background: '#0b0b12',
             color: '#e5e7eb',
             overflowX: 'auto',
             lineHeight: '1.5',
@@ -170,7 +166,7 @@ export default function Card({ titulo, categoria, codigo, index = 0 }) {
         {/* EXPANDIR */}
         {muitasLinhas && (
           <motion.button
-            onClick={() => setExpandido(e => !e)}
+            onClick={() => setExpandido(!expandido)}
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
             style={{
@@ -187,23 +183,11 @@ export default function Card({ titulo, categoria, codigo, index = 0 }) {
           >
             <AnimatePresence mode="wait">
               {expandido ? (
-                <motion.span
-                  key="menos"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  style={{ display: 'flex', gap: '5px' }}
-                >
+                <motion.span key="up">
                   <ChevronUp size={13} /> Recolher
                 </motion.span>
               ) : (
-                <motion.span
-                  key="mais"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  style={{ display: 'flex', gap: '5px' }}
-                >
+                <motion.span key="down">
                   <ChevronDown size={13} />
                   Ver mais ({linhas.length - MAX_LINES})
                 </motion.span>

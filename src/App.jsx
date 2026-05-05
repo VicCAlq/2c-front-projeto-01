@@ -64,6 +64,7 @@ function App() {
                     {alunoAtivo.codigos.map((cod, index) => (
                       <Card
                         key={index}
+                        index={index}
                         titulo={cod.titulo}
                         categoria={cod.categoria}
                         codigo={cod.codigo}

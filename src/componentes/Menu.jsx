@@ -1,44 +1,60 @@
-import styles from '../styles/main.js'
 import { motion } from 'framer-motion'
 import Botao from './Botao.jsx'
 
 const containerVariants = {
   hidden: {},
   show: {
-    transition: { staggerChildren: 0.08, delayChildren: 0.2 },
+    transition: {
+      staggerChildren: 0.08,
+      delayChildren: 0.15,
+    },
   },
 }
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20, scale: 0.9 },
+  hidden: { opacity: 0, y: 18, scale: 0.9 },
   show: {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { type: 'spring', stiffness: 120, damping: 18 },
+    transition: {
+      type: 'spring',
+      stiffness: 140,
+      damping: 16,
+    },
   },
 }
 
-export default function Menu({ alunos, alunoSelecionado, setAlunoSelecionado }) {
+export default function Menu({
+  alunos,
+  alunoSelecionado,
+  setAlunoSelecionado,
+}) {
   return (
     <motion.div
       variants={containerVariants}
       initial="hidden"
       animate="show"
       style={{
-        ...styles.menu,
         display: 'flex',
         flexWrap: 'wrap',
-        gap: '12px',
         justifyContent: 'center',
+        gap: '14px',
+        padding: '10px 0',
       }}
     >
       {alunos.map((aluno) => (
         <motion.div
           key={aluno.nome}
           variants={itemVariants}
-          whileHover={{ y: -4 }}
-          transition={{ type: 'spring', stiffness: 200 }}
+          whileHover={{
+            y: -6,
+            scale: 1.02,
+          }}
+          whileTap={{ scale: 0.97 }}
+          style={{
+            transition: '0.2s',
+          }}
         >
           <Botao
             nome={aluno.nome}

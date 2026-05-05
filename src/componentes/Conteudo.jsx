@@ -1,4 +1,3 @@
-import styles from '../styles/main.js'
 import { motion } from 'framer-motion'
 import { Users } from 'lucide-react'
 
@@ -16,68 +15,51 @@ function getAvatar(index) {
   return `https://api.dicebear.com/9.x/pixel-art/svg?seed=${seed}&backgroundColor=${cor}`
 }
 
-export default function Conteudo({ equipe }) {
+export default function Conteudo({ equipe = [] }) {
   return (
     <motion.div
       style={{
-        ...styles.conteudo,
         maxWidth: '900px',
         margin: '0 auto',
+        padding: '20px',
+        color: '#fff',
       }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
       {/* TÍTULO */}
       <div style={{ marginBottom: '25px' }}>
-        <h1
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '10px',
-            fontSize: '26px',
-            color: '#e5e7eb',
-          }}
-        >
-          <Users size={26} style={{ opacity: 0.8 }} />
+        <h1 style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <Users size={26} />
           Sobre a Equipe
         </h1>
 
-        <p style={{ color: '#9ca3af', marginTop: '6px' }}>
+        <p style={{ color: '#9ca3af' }}>
           Conheça as pessoas por trás do projeto
         </p>
       </div>
 
       {/* LISTA */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
         {equipe.map((membro, i) => (
           <motion.div
             key={membro.nome}
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.08 }}
-            whileHover={{ y: -5 }}
+            transition={{ delay: i * 0.05 }}
+            whileHover={{ y: -4 }}
             style={{
               display: 'flex',
               alignItems: 'center',
-              gap: '14px',
-              padding: '14px',
-              borderRadius: '16px',
-
-              backdropFilter: 'blur(12px)',
-              background: 'rgba(20,20,30,0.65)',
+              gap: '12px',
+              padding: '12px',
+              borderRadius: '12px',
+              background: 'rgba(20,20,30,0.6)',
               border: '1px solid rgba(255,255,255,0.06)',
-
-              transition: '0.3s',
             }}
           >
             {/* NÚMERO */}
-            <span
-              style={{
-                fontSize: '12px',
-                color: '#6b7280',
-                minWidth: '28px',
-              }}
-            >
+            <span style={{ color: '#6b7280', fontSize: '12px' }}>
               {String(i + 1).padStart(2, '0')}
             </span>
 
@@ -87,56 +69,35 @@ export default function Conteudo({ equipe }) {
               alt={membro.nome}
               whileHover={{ scale: 1.08 }}
               style={{
-                width: '42px',
-                height: '42px',
+                width: '40px',
+                height: '40px',
                 borderRadius: '50%',
-                border: '2px solid rgba(255,255,255,0.08)',
               }}
             />
 
             {/* INFO */}
-            <div style={{ flex: 1 }}>
-              <h2
-                style={{
-                  fontSize: '15px',
-                  color: '#e5e7eb',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '6px',
-                }}
-              >
+            <div>
+              <h2 style={{ fontSize: '14px' }}>
                 {membro.nome}
 
                 {i === 0 && (
-                  <span
-                    style={{
-                      fontSize: '10px',
-                      padding: '2px 6px',
-                      borderRadius: '999px',
-                      background: 'rgba(139,92,246,0.2)',
-                      color: '#c4b5fd',
-                    }}
-                  >
+                  <span style={{
+                    marginLeft: 6,
+                    fontSize: '10px',
+                    padding: '2px 6px',
+                    borderRadius: '999px',
+                    background: 'rgba(139,92,246,0.2)',
+                    color: '#c4b5fd',
+                  }}>
                     Dev
                   </span>
                 )}
               </h2>
 
-              <p style={{ fontSize: '13px', color: '#9ca3af' }}>
+              <p style={{ fontSize: '12px', color: '#9ca3af' }}>
                 {membro.descricao || 'Descrição pendente...'}
               </p>
             </div>
-
-            {/* INDICADOR VISUAL */}
-            <div
-              style={{
-                width: '6px',
-                height: '6px',
-                borderRadius: '50%',
-                background: '#8b5cf6',
-                opacity: 0.6,
-              }}
-            />
           </motion.div>
         ))}
       </div>
