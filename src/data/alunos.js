@@ -1,8 +1,8 @@
-import codigosRyan from 'src/codigos/Ryan/index.js'
-import codigosArthurEmanuel from 'src/codigos/arthurEmanuel/index.js'
-import codigosPedroVictor from 'src/codigos/pedroVictor/index.js'
-import codigosThulio from 'src/codigos/thulio/index.js'
-import codigosArthurLucio from 'src/codigos/arthurLucio/index.js'
+import codigosRyan from '../codigos/Ryan/index.js'
+import codigosArthurEmanuel from '../codigos/arthurEmanuel/index.js'
+import codigosPedroVictor from '../codigos/pedroVictor/index.js'
+import codigosThulio from '../codigos/thulio/index.js'
+import codigosArthurLucio from '../codigos/arthurLucio/index.js'
 
 const SEEYOU = [
   'gato', 'cachorro', 'tigre', 'lobo', 'panda', 'coruja',
@@ -35,8 +35,9 @@ const CORES = [
 ]
 
 function gerarFotoAleatoria() {
-  const SEEYOU = SEEYOU[Math.floor(Math.random() * SEEYOU.length)]
-  const CORES  = CORES[Math.floor(Math.random() * CORES.length)]
+  const seed = SEEYOU[Math.floor(Math.random() * SEEYOU.length)]
+  const cor  = CORES[Math.floor(Math.random() * CORES.length)]
+
   return `https://api.dicebear.com/9.x/pixel-art/svg?seed=${seed}&backgroundColor=${cor}`
 }
 

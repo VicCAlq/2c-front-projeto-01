@@ -1,4 +1,4 @@
-import styles from 'src/styles/main.js';
+import styles from '../styles/main.js';
 import { motion } from 'framer-motion';
 import { User } from 'lucide-react';
 
