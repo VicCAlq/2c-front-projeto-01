@@ -4,52 +4,48 @@ export default function Card({ aluno }) {
   if (!aluno) {
     return (
       <div className="cardContainer">
-        <div className="card" style={{ alignItems: 'center', textAlign: 'center' }}>
-          <p style={{ color: '#333' }}>
-            Selecione um integrante
-          </p>
+        <div className="card card-vazio">
+          <span className="card-vazio-icon">👆</span>
+          <p className="card-vazio-texto">Selecione um integrante no menu acima</p>
         </div>
       </div>
     );
   }
 
+  const secoes = [
+    { chave: 'facil',     label: ' Muito Fácil',                  cor: '#2ecc71' },
+    { chave: 'dificil',   label: ' Muito Difícil',                 cor: '#e74c3c' },
+    { chave: 'ajudou',    label: ' Ajudou a Entender Muita Coisa', cor: '#3498db' },
+    { chave: 'naoAjudou', label: ' Não Ajudou a Entender Nada',    cor: '#e67e22' },
+  ];
+
   return (
     <div className="cardContainer">
       <div className="card">
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-          <img src={aluno.foto} alt="" style={{width: '40px', height: '40px', borderRadius: '50%'}} />
-          <h2 style={{ margin: 0, color: '#333', fontSize: '1.5rem' }}>
-            Códigos de {aluno.nome}
-          </h2>
-        </div>
-        
-        <div className="cardSection">
-          <h3 className="cardTitle">Questão muito fácil</h3>
-          <pre className="cardCode">
-            {aluno.codigos?.facil || "// Código"}
-          </pre>
+
+        {/* Cabeçalho do card com cor do aluno */}
+        <div className="card-header" style={{ borderLeft: `6px solid ${aluno.corTema}` }}>
+          <img
+            src={aluno.foto}
+            alt={`Foto de ${aluno.nome}`}
+            className="card-header-foto"
+          />
+          <div>
+            <h2 className="card-header-nome">{aluno.nome}</h2>
+            <p className="card-header-sub">Códigos selecionados</p>
+          </div>
         </div>
 
-        <div className="cardSection">
-          <h3 className="cardTitle">Questão muito difícil</h3>
-          <pre className="cardCode">
-            {aluno.codigos?.dificil || "// Código"}
-          </pre>
-        </div>
+        {/* Seções de código */}
+        {secoes.map(({ chave, label, cor }) => (
+          <div key={chave} className="cardSection" style={{ borderLeft: `4px solid ${cor}` }}>
+            <h3 className="cardTitle" style={{ color: cor }}>{label}</h3>
+            <pre className="cardCode">
+              {aluno.codigos?.[chave] || '// Nenhum código adicionado ainda'}
+            </pre>
+          </div>
+        ))}
 
-        <div className="cardSection">
-          <h3 className="cardTitle">Questão que ajudou a entender muito</h3>
-          <pre className="cardCode">
-            {aluno.codigos?.ajudou || "// Código"}
-          </pre>
-        </div>
-
-        <div className="cardSection">
-          <h3 className="cardTitle">Questão que não ajudou a entender nada</h3>
-          <pre className="cardCode">
-            {aluno.codigos?.naoAjudou || "// Código"}
-          </pre>
-        </div>
       </div>
     </div>
   );
