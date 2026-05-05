@@ -13,8 +13,7 @@ const CORES = ['6366f1','ec4899','22c55e','f59e0b','3b82f6','ef4444','8b5cf6']
 function getAvatar(index) {
   const seed = SEEDS[index % SEEDS.length]
   const cor  = CORES[index % CORES.length]
-  return https://api.dicebear.com/9.x/pixel-art/svg?seed=${seed}&backgroundColor=${cor}
-}
+  return  https://api.dicebear.com/9.x/pixel-art/svg?seed=${seed}&backgroundColor=${cor}
 
 export default function Conteudo({ equipe }) {
   return (
