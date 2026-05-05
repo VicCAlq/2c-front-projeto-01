@@ -58,7 +58,7 @@ export const alunos = [
     codigos: codigosPedroVictor,
   },
   {
-    nome: 'Thulio',
+    nome: 'Thulio Barbosa',
     foto: gerarFotoAleatoria(),
     codigos: codigosThulio,
   },
@@ -73,6 +73,6 @@ export const equipe = [
   { nome: 'Ryan Gabriel',    descricao: 'Desenvolvedor Do Projeto' },
   { nome: 'Arthur Emanuel', descricao: 'Desenvolvedor Do Projeto' },
   { nome: 'Pedro Victor', descricao: 'Desenvolvedor Do Projeto' },
-  { nome: 'Thulio', descricao: 'Desenvolvedor Do Projeto' },
+  { nome: 'Thulio  Barbosa', descricao: 'Desenvolvedor Do Projeto' },
   { nome: 'Arthur Lucio', descricao: 'Desenvolvedor Do Projeto' },
 ]
