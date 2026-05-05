@@ -47,19 +47,12 @@ export default function Menu({
         <motion.div
           key={aluno.nome}
           variants={itemVariants}
-          whileHover={{
-            y: -6,
-            scale: 1.02,
-          }}
+          whileHover={{ y: -6, scale: 1.02 }}
           whileTap={{ scale: 0.97 }}
-          style={{
-            transition: '0.2s',
-          }}
         >
           <Botao
             nome={aluno.nome}
             foto={aluno.foto}
-            totalCodigos={aluno.codigos?.length ?? 0}
             selecionado={alunoSelecionado === aluno.nome}
             onClick={() => setAlunoSelecionado(aluno.nome)}
           />

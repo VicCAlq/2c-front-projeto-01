@@ -3,11 +3,11 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 import styles from './styles/main.js'
 
-import Cabecalho from './components/Cabecalho.jsx'
-import Rodape from './components/Rodape.jsx'
-import Menu from './components/Menu.jsx'
-import Card from './components/Card.jsx'
-import Conteudo from './components/Conteudo.jsx'
+import Cabecalho from './componentes/Cabecalho.jsx'
+import Rodape from './componentes/Rodape.jsx'
+import Menu from './componentes/Menu.jsx'
+import Card from './componentes/Card.jsx'
+import Conteudo from './componentes/Conteudo.jsx'
 
 import { alunos, equipe } from './data/alunos.js'
 
