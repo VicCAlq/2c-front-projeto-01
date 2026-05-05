@@ -1,6 +1,5 @@
-import styles from '../styles/main.js';
 import {motion} from 'framer-motion';
-import {user} from 'lucide-react';
+import {User} from 'lucide-react';
 
 export default function Botao({ nome, foto, selecionado, onClick }) {
   return (
