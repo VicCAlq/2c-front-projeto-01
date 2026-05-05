@@ -257,3 +257,119 @@ body {
   align-items: center;
   gap: 1rem;
 }
+/* Cabecalho atualizado */
+.cabecalho {
+  justify-content: space-between !important;
+  padding: 0.8rem 2rem !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.85) !important;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.cabecalho-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cabecalho-logo-icon {
+  background: #111;
+  color: #ffef00;
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.cabecalho-logo-texto {
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: #111;
+}
+
+.cabecalho-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.btnCabecalho {
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.btnCabecalho:hover {
+  background: #f0f0f0 !important;
+  transform: translateY(-1px);
+}
+
+.btnCabecalho-ativo {
+  background: #111 !important;
+  color: #ffef00 !important;
+  border-color: #111 !important;
+  font-weight: bold;
+}
+
+/* Card atualizado */
+.card-vazio {
+  align-items: center !important;
+  text-align: center;
+  padding: 3rem !important;
+  border: 2px dashed #ccc !important;
+  background: transparent !important;
+}
+
+.card-vazio-icon {
+  font-size: 2.5rem;
+}
+
+.card-vazio-texto {
+  color: #666;
+  font-size: 1.1rem;
+  margin: 0.5rem 0 0;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.card-header-foto {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.card-header-nome {
+  margin: 0;
+  color: #111;
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.card-header-sub {
+  margin: 0.2rem 0 0;
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.cardSection {
+  border-radius: 6px !important;
+  transition: box-shadow 0.2s;
+}
+
+.cardSection:hover {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
