@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet } from 'vite';
 import Botao from './Botao';
 
 export default function Menu({ alunos, alunoSelecionado, setAlunoSelecionado }) {
@@ -20,6 +20,7 @@ export default function Menu({ alunos, alunoSelecionado, setAlunoSelecionado }) 
     </ScrollView>
   );
 }
+
 const styles = StyleSheet.create({
   menu: {
     flexDirection: 'row',

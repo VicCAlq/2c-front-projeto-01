@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, StyleSheet } from 'react-native';
+import { View, Text, ScrollView, StyleSheet } from 'vite';
 
 const categorias = {
   facil: { label: '😌 Muito Fácil', cor: '#4ade80' },

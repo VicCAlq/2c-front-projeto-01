@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, Linking, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, Linking, StyleSheet } from 'vite';
 
 export default function Rodape() {
   const urlRepositorio = 'https://github.com/SEU-USUARIO/SEU-REPOSITORIO';
