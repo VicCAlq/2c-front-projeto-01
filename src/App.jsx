@@ -1,17 +1,16 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-import styles from './styles/main.js'
+import styles from 'src/styles/main.js'
 
-import Cabecalho from './components/Cabecalho.jsx'
-import Rodape from './components/Rodape.jsx'
-import Menu from './components/Menu.jsx'
-import Card from './components/Card.jsx'
-import Conteudo from './components/Conteudo.jsx'
+import Cabecalho from 'src/components/Cabecalho.jsx'
+import Rodape from 'src/components/Rodape.jsx'
+import Menu from 'src/components/Menu.jsx'
+import Card from 'src/components/Card.jsx'
+import Conteudo from 'src/components/Conteudo.jsx'
 
-import { alunos, equipe } from './data/alunos.js'
+import { alunos, equipe } from 'src/data/alunos.js'
 
-// animações
 const fadeSlideLeft = {
   initial: { opacity: 0, x: -30 },
   animate: { opacity: 1, x: 0 },
