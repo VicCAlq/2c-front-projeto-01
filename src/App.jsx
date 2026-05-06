@@ -13,7 +13,7 @@ const equipe = [
     foto: "https://ui-avatars.com/api/?name=Davi+Barbosa&background=3498db&color=fff",
     corTema: "#3498db",
     descricao: "Alterou a estilização do rodapé, organizou as informações do rodapé e alterou o componente Conteudo para que ficasse mais bem projetado",
-    codigos: { facil: ``, dificil: ``, ajudou: ``, naoAjudou: `` }
+    codigos: { facil: `questao 2 de indices listas`, dificil: `questao 9 de metodos listas`, ajudou: `questao 3 de while lacos`, naoAjudou: `questao 7 de while lacos` }
   },
   {
     id: 2,
@@ -21,15 +21,15 @@ const equipe = [
     foto: "https://ui-avatars.com/api/?name=Gabriel+Vitor&background=9b59b6&color=fff",
     corTema: "#9b59b6",
     descricao: "Criou a base do projeto e dos comonentes, e estilizou o fundo",
-    codigos: { facil: ``, dificil: ``, ajudou: ``, naoAjudou: `` }
+    codigos: { facil: `questao 2 de metodos listas`, dificil: `questao 7 de indices listas`, ajudou: `questao 3 de funcoes`, naoAjudou: `questao 10 de funcoes` }
   },
   {
     id: 3,
     nome: "Samuel Erivaldo",
     foto: "https://ui-avatars.com/api/?name=Samuel+Erivaldo&background=2ecc71&color=fff",
     corTema: "#2ecc71",
-    descricao: "Desenvolveu o componente botão e integrou ele com o sistema.",
-    codigos: { facil: ``, dificil: ``, ajudou: ``, naoAjudou: `` }
+    descricao: "Desenvolveu o roteamento condicional entre as páginas",
+    codigos: { facil: `questao 1 de for lacos`, dificil: `questao 8 de while lacos`, ajudou: `questao 4 de indices listas`, naoAjudou: `questao 2 de funcoes` }
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ const equipe = [
     foto: "https://ui-avatars.com/api/?name=Saulo+Bizerril&background=e67e22&color=fff",
     corTema: "#e67e22",
     descricao: "Estruturou os estilos CSS in JS no objeto styles",
-    codigos: { facil: ``, dificil: ``, ajudou: ``, naoAjudou: `` }
+    codigos: { facil: `questao 3 de while lacos`, dificil: `questao 6 de indices listas`, ajudou: `questao 2 de indices listas`, naoAjudou: `questao 5 de funcoes` }
   },
   {
     id: 5,
@@ -45,7 +45,7 @@ const equipe = [
     foto: "https://ui-avatars.com/api/?name=Walleysson+Ferreira&background=e74c3c&color=fff",
     corTema: "#e74c3c",
     descricao: "Desenvolveu o componente Card e Cabeçalho",
-    codigos: { facil: ``, dificil: ``, ajudou: ``, naoAjudou: `` }
+    codigos: { facil: `questao 2 de metodos listas`, dificil: `questao 2 de for lacos`, ajudou: `questao 4 de while lacos`, naoAjudou: `questao 10 de for lacos` }
   }
 ];
 
