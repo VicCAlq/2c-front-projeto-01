@@ -28,7 +28,7 @@ const equipe = [
     nome: "Samuel Erivaldo",
     foto: "https://ui-avatars.com/api/?name=Samuel+Erivaldo&background=2ecc71&color=fff",
     corTema: "#2ecc71",
-    descricao: "Desenvolveu o roteamento condicional entre as páginas",
+    descricao: "Desenvolveu o componente botão e integrou ele com o sistema.",
     codigos: { facil: ``, dificil: ``, ajudou: ``, naoAjudou: `` }
   },
   {
