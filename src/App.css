@@ -1,0 +1,167 @@
+
+body {
+  background-color: #fadff5;
+  padding-bottom: 100px;
+}
+
+.botao-aluno {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgb(238, 239, 197);
+  padding: 10px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid rgb(91, 85, 66);
+}
+
+.botao-aluno:hover {
+  border: 2.3px solid #ff00cc;
+  transform: scale(1.015);
+}
+
+.foto-aluno {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.nome-aluno {
+  font-weight: bold;
+  color: #471069;
+}
+
+.cabecalho {
+  background-color: #fffbbe;
+  padding: 10px;
+  padding-top: 40px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border-bottom: 5px solid #ff4da6; 
+}
+
+.botao1 {
+  background-color: #ffd633; 
+  border: 2px rgb(221, 118, 190);
+  display: flex;
+  margin-left: 2px;
+  color: #000;
+  cursor: pointer;
+}
+
+.botao2 {
+  background-color: #ffd633; 
+  border: 2px rgb(221, 118, 190);
+  display: flex;
+  margin-right: 2px;
+  color: #000;
+  cursor: pointer;
+}
+
+.card {
+  background-color: #fff;
+  border: 3px solid #ff4da6; /* rosa */
+  border-radius: 15px;
+
+  padding: 15px;
+  margin: 15px;
+
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card-titulo {
+  color: #ff4da6; /* rosa forte */
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.card-codigo {
+  background-color: #fff4cc; /* amarelo claro */
+  padding: 10px;
+  border-radius: 10px;
+  border-left: 5px solid #ffd633;
+  margin-bottom: 15px;
+}
+
+.card h2{
+  color: #6a0c57;
+  font-size: larger;
+}
+
+.card h3 {
+  color: #e375ac;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.card p {
+  background-color: #fff9e6;
+  padding: 8px;
+  border-radius: 8px;
+  border-left: 4px solid #ffd633;
+  margin-bottom: 8px;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: nowrap ;
+  justify-content: center;
+  gap: 15px;
+  padding: 15px;
+  background-color: #ff4da6;
+  border-bottom: 3px solid #ffd633; 
+}
+
+.rodape {
+  background-color: #ff4da6;
+  border-top: 5px solid #ffd633;
+  padding: 15px;
+  text-align: center;
+  margin-top: auto;
+}
+
+.rodape-link {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #000;
+  background-color: #ffd633; 
+  padding: 8px 15px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+.rodape-link:hover {
+  background-color: #ffea80;
+  transform: scale(1.05);
+}
+
+.rodape-texto {
+  color: white;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.tituloVitrine {
+  color: #ff4da6; 
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.tituloEquipe {
+  color: #ffd426; 
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+}
+
+p {
+  color: #000;
+}
