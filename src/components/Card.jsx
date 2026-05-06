@@ -1,10 +1,10 @@
 import { View, Text, ScrollView, StyleSheet } from 'vite';
 
 const categorias = {
-  facil: { label: '😌 Muito Fácil', cor: '#4ade80' },
-  dificil: { label: '🔥 Muito Difícil', cor: '#f87171' },
-  ajudou: { label: '💡 Me Ajudou Muito', cor: '#60a5fa' },
-  naoAjudou: { label: '😕 Não Me Ajudou', cor: '#a78bfa' },
+  facil: { label: ' Muito Fácil', cor: '#00f545' },
+  dificil: { label: ' Muito Difícil', cor: '#ff0a0a' },
+  ajudou: { label: ' Me Ajudou Muito', cor: '#00fffb' },
+  naoAjudou: { label: ' Não Me Ajudou', cor: '#a6814d' },
 };
 
 export default function Card({ conteudo }) {

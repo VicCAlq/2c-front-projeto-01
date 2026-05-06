@@ -21,6 +21,7 @@ export default function Cabecalho({ paginaAtual, setPagina }) {
           <Text style={[styles.textoBotaoNav, paginaAtual === 'sobre' && styles.textoAtivo]}>
             Sobre a Equipe
           </Text>
+          
         </TouchableOpacity>
       </View>
     </View>

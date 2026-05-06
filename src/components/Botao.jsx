@@ -7,10 +7,10 @@ export default function Botao({ nome, foto, selecionado, onPress }) {
       onPress={onPress}
     >
       <Image
-        source={foto ? { uri: foto } : require('../../assets/placeholder.png')}
+        source={foto ? { uri: foto } : require('../../assets/saladeaula.png')}
         style={styles.foto}
       />
-      <Text style={[styles.nome, selecionado && styles.nomeSelecionado]}>{nome}</Text>
+      <Text style={[styles.Andrey, selecionado && styles.nomeSelecionado]}>{Andrey}</Text>
       {selecionado && <View style={styles.indicador} />}
     </TouchableOpacity>
   );
