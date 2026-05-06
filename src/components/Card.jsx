@@ -2,7 +2,7 @@
 
 const categorias = {
   facil: { label: ' Muito Fácil', cor: '#00f545' },
-  dificil: { label: ' Muito Difícil', cor: '#ff0a0a' },
+  dificil: { label: ' Muito Difíciullllllll', cor: '#ff0a0a' },
   ajudou: { label: ' Me Ajudou Muito', cor: '#00fffb' },
   naoAjudou: { label: ' Não Me Ajudou', cor: '#a6814d' },
 };
