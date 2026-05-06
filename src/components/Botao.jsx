@@ -1,4 +1,4 @@
-import { TouchableOpacity, Text, Image, View, StyleSheet } from 'vite';
+
 
 export default function Botao({ nome, foto, selecionado, onPress }) {
   return (
