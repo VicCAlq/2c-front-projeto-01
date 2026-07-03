@@ -1,8 +1,8 @@
 import codigosRyan from '../codigos/Ryan/index.js'
-import codigosArthurEmanuel from '../codigos/arthurEmanuel/index.js'
-import codigosPedroVictor from '../codigos/pedroVictor/index.js'
-import codigosThulio from '../codigos/thulio/index.js'
-import codigosArthurLucio from '../codigos/arthurLucio/index.js'
+import codigosArthurEmanuel from '../codigos/ArthurEmanuel/index.js'
+import codigosPedroVictor from '../codigos/PedroVictor/index.js'
+import codigosThulio from '../codigos/Thulio/index.js'
+import codigosArthurLucio from '../codigos/ArthurLucio/index.js'
 
 const SEEYOU = [
   'gato', 'cachorro', 'tigre', 'lobo', 'panda', 'coruja',
